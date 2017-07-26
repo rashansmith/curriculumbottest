@@ -32,11 +32,11 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    type = parameters.get("exam-type")
+    worth = parameters.get("exam-type")
 
-    worth = {'Mid Term 1':20, 'Mid Term 2':20, 'Final Exam':50, 'Extra Credit Exam':10}
+    worths = {'Mid Term1':20, 'Mid Term2':20, 'Final Exam':50, 'Extra Credit Exam':10}
 
-    speech = "The" + worth + " is worth " + str(exams[worth]) + " Percent of your grade."
+    speech = "The" + worth + " is worth " + str(worths[worth]) + " Percent of your grade."
 
     print("Response:")
     print(speech)
